@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function showCreateForm() {
-        return 'Hello!';
+    public function viewSinglePost(Post $post) {
+        $post['body'] = strip_tags(Str::markdown($post->body), '<p><ul><ol><li><strong><em><h3><br>');
+        return view('single-post', ['post' => $post]);
+    }
 
+
+    public function showCreateForm() {
+        return view('create-post');
     }
 
 
@@ -22,7 +29,8 @@ class PostController extends Controller
         $incomingFields['body'] = strip_tags($incomingFields['body']);
         $incomingFields['user_id'] = auth()->id();
 
-        Post::create($incomingFields);
-        return view('create-post');
+        $newPost = Post::create($incomingFields);
+
+        return redirect("/post/{$newPost->id}")->with('success', 'New post successfully created');
     }
 }
