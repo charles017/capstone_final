@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="container py-md-5 container--narrow">
+  <div class="container py-md-5 container--narrow mt-5 py-5">
       <h2>
         <img class="avatar-small" src="{{$sharedData['avatar']}}" /> {{$sharedData['username']}}
         @auth
@@ -18,7 +18,7 @@
         @endif
 
         @if(auth()->user()->username == $sharedData['username'])
-          <a href="/manage-avatar" class="btn btn-secondary btn-sm">Manage Avatar</a>
+          <a href="/manage-avatar" class="btn btn-dark btn-sm">Manage Avatar</a>
           @endif
         @endauth
       </h2>

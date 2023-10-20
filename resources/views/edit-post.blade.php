@@ -1,7 +1,7 @@
 <x-layout>
-  <div class="container py-md-5 container--narrow">
+  <div class="container py-md-5 container--narrow mt-5 py-5">
     <form action="/post/{{$post->id}}" method="POST">
-      <p><small><strong><a href="/post/{{$post->id}}">&laquo; Back to post permalink</a></strong></small></p>
+      <p class="text-black"><small><strong><a href="/post/{{$post->id}}">&laquo; Back to post permalink</a></strong></small></p>
       @csrf
       @method('Put')
       <div class="form-group">
@@ -20,7 +20,7 @@
         @enderror
       </div>
 
-      <button class="btn btn-primary">Save Changes</button>
+      <button class="btn btn-dark mt-3">Save Changes</button>
     </form>
   </div>
 </x-layout>

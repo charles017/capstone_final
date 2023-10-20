@@ -18,7 +18,7 @@
         @enderror
       </div>
 
-      <button class="btn btn-primary">Save New Post</button>
+      <button class="btn btn-primary mt-3">Save New Post</button>
     </form>
   </div>
 </x-layout>

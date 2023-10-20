@@ -1,6 +1,6 @@
 <x-layout>
-  <div class="container container--narrow py-md-5">
-    <h2 class="text-center mb-3">Upload a New Avatar</h2>
+  <div class="container container--narrow py-md-5 mt-5 py-5">
+    <h2 class="text-center mb-5 mt-5">Upload a New Avatar</h2>
     <form action="/manage-avatar" method="POST" enctype="multipart/form-data">
       @csrf
       <div class="mb-3">
@@ -9,7 +9,7 @@
         <p class="alert small alert-danger shadow-sm">{{$message}}</p>
         @enderror
       </div>
-      <button class="btn btn-primary">Save</button>
+      <button class="btn btn-dark">Save</button>
 
     </form>
     

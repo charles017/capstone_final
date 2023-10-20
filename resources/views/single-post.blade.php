@@ -1,6 +1,6 @@
 <x-layout>
-  <div class="container py-md-5 container--narrow">
-      <div class="d-flex justify-content-between">
+  <div class="container py-md-5 container--narrow mt-g mt-5 py-5">
+      <div class="d-flex justify-content-between mt-5">
         <h2>{{$post->title}}</h2>
         @can('update', $post)
         <span class="pt-2">

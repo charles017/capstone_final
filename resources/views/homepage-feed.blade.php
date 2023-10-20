@@ -1,7 +1,7 @@
 <x-layout>
-  <div class="container py-md-5 container--narrow">
+  <div class="container py-md-5 container--narrow mt-5 py-5">
       @unless($posts->isEmpty())
-      <h2 class="text-center mb-4">The Latest From Those You Follow</h2>
+      <h2 class="text-center mb-4 mt-5">The Latest From Those You Follow</h2>
       <div class="list-group">
         @foreach($posts as $post)
         <a href="/post/{{$post->id}}" class="list-group-item list-group-item-action">
