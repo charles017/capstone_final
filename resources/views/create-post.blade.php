@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="container py-md-5 container--narrow">
+  <div class="container py-md-5 container--narrow mt-5 py-5">
     <form action="/create-post" method="POST">
       @csrf
       <div class="form-group">
@@ -18,7 +18,7 @@
         @enderror
       </div>
 
-      <button class="btn btn-primary mt-3">Save New Post</button>
+      <button class="btn btn-dark mt-3">Save New Post</button>
     </form>
   </div>
 </x-layout>

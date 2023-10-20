@@ -11,6 +11,7 @@
         </div>
         <div class="col-md-3 col-sm-12 mt-md-5 my-md-5 py-md-5">
           <form action="/register" method="POST" id="registration-form">
+            @csrf
             <div class="form-group mt-5">
               <label for="username-register" class="text-muted mb-1"><small>Username</small></label>
               <input name="username" value= "{{old('username')}}" id="username-register" class="form-control" type="text" placeholder="Pick a username" autocomplete="off" />
@@ -37,7 +38,7 @@
 
             <div class="form-group">
               <label for="password-register-confirm" class="text-muted mb-1"><small>Confirm Password</small></label>
-              <input name="password" id="password-register-confirm" class="form-control" type="password" placeholder="Confirm password" />
+              <input name="password_confirmation" id="password-register-confirm" class="form-control" type="password" placeholder="Confirm password" />
               @error('password_confirmation')
               <p class="m-0 small alert alert-danger shadow-sm">{{$message}}</p>
               @enderror
